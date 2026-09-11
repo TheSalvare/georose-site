@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GeoRose · Media Kit 2026</title>
+<title>georose · Media Kit</title>
 
 <!-- Favicon — drop your icon files in and these will pick them up.
      A single .png works fine; the others are optional extras. -->
@@ -130,6 +130,12 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
 }
 .hero .tagline { font-size: var(--fs-eyebrow); letter-spacing: 0.02em; }
 .hero .welcome { font-size: var(--fs-body); max-width: 44ch; margin: clamp(2rem, 5vw, 3.5rem) auto 0; line-height: 1.6; }
+/* small decorative flourish in place of the old bat motif */
+.hero-flourish {
+  height: clamp(28px, 4vw, 44px); width: auto;
+  margin: clamp(2rem, 5vw, 3.5rem) auto 0;
+  display: block;
+}
 /* spacer pushes the socials to the bottom of the hero */
 .hero .hero-spacer { flex: 1 1 auto; min-height: clamp(2rem, 6vw, 5rem); }
 .socials { margin-bottom: clamp(1rem, 3vw, 2.5rem); }
@@ -291,7 +297,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
 .contact { text-align: center; }
 .contact h2 { font-size: var(--fs-h2); color: var(--cream); margin-bottom: 0.6em; }
 .contact .areas { font-size: var(--fs-body); margin-bottom: 1.4em; }
-.contact .email-slot { display: inline-block; min-height: 1.6em; min-width: 280px; font-size: var(--fs-body); color: var(--lilac); text-decoration: underline; text-underline-offset: 4px; }
+.contact .email-slot { display: inline-block; min-height: 1.6em; min-width: 280px; font-size: var(--fs-body); color: var(--lilac); text-decoration: underline; text-underline-offset: 4px; transition: color 0.2s ease; }
+.contact .email-slot:hover { color: var(--pink); }
 .contact .note { font-size: var(--fs-body); max-width: 42ch; margin: 1.4em auto 0; line-height: 1.6; }
 .site-footer { text-align: center; padding: clamp(3rem, 7vw, 5rem) 0 clamp(2rem, 4vw, 3rem); color: var(--pink); font-size: var(--fs-small); }
 .site-footer p { margin: 0.2em 0; }
@@ -362,7 +369,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
       <span class="pill">gaming</span>
       <span class="pill">uk based</span>
     </div>
-    <p class="welcome">‧₊˚.‧₊˚. 🦇 .˚₊‧.˚₊‧</p>
+    <img class="hero-flourish" src="./images/georose-rose.png" alt="">
     <div class="hero-spacer" aria-hidden="true"></div>
     <div class="socials">
       <a href="https://www.twitch.tv/georose/" class="social" aria-label="Twitch" target="_blank" rel="noopener">
@@ -409,7 +416,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
       <div class="stat"><span class="stat-label">tiktok</span><span class="stat-num">117,000</span></div>
       <div class="stat"><span class="stat-label">tiktok likes</span><span class="stat-num">2.2m</span></div>
       <div class="stat"><span class="stat-label">twitch</span><span class="stat-num">8,000</span></div>
-      <div class="stat"><span class="stat-label">twitch avg viewers</span><span class="stat-num">75+</span></div>
+      <div class="stat"><span class="stat-label">twitch avg viewers</span><span class="stat-num">99+</span></div>
     </div>
     <div class="stats-grid stats-row">
       <div class="stat"><span class="stat-label">instagram</span><span class="stat-num">50,000</span></div>
@@ -423,29 +430,29 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
   <div class="wrap">
     <div class="community-card fade-in">
       <h2>live community<br>and audience</h2>
-      <p class="community-tags">georose is live over 25 hours per week on twitch and tiktok<br>to an engaged and loyal community</p>
+      <p class="community-tags">georose is live over 25 hours per week on twitch and tiktok<br>to an engaged and loyal community<br><br>based on the previous 51,551 channel views</p>
 
       <h3 class="chart-title">geographic reach</h3>
       <div class="geo-chart">
-        <div class="geo-row" data-pct="40">
+        <div class="geo-row" data-pct="30">
           <span class="geo-label">united states</span>
-          <div class="geo-track"><span class="geo-fill" style="--pct:40%"></span></div>
-          <span class="geo-val">40%</span>
+          <div class="geo-track"><span class="geo-fill" style="--pct:30%"></span></div>
+          <span class="geo-val">30%</span>
         </div>
-        <div class="geo-row" data-pct="27">
+        <div class="geo-row" data-pct="20">
           <span class="geo-label">united kingdom</span>
-          <div class="geo-track"><span class="geo-fill" style="--pct:27%"></span></div>
-          <span class="geo-val">27%</span>
+          <div class="geo-track"><span class="geo-fill" style="--pct:20%"></span></div>
+          <span class="geo-val">20%</span>
         </div>
-        <div class="geo-row" data-pct="4">
+        <div class="geo-row" data-pct="6">
           <span class="geo-label">canada</span>
-          <div class="geo-track"><span class="geo-fill" style="--pct:4%"></span></div>
-          <span class="geo-val">4%</span>
+          <div class="geo-track"><span class="geo-fill" style="--pct:6%"></span></div>
+          <span class="geo-val">6%</span>
         </div>
-        <div class="geo-row" data-pct="29">
+        <div class="geo-row" data-pct="44">
           <span class="geo-label">other</span>
-          <div class="geo-track"><span class="geo-fill" style="--pct:29%"></span></div>
-          <span class="geo-val">29%</span>
+          <div class="geo-track"><span class="geo-fill" style="--pct:44%"></span></div>
+          <span class="geo-val">44%</span>
         </div>
       </div>
     </div>
@@ -471,7 +478,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
   <div class="wrap">
     <h2>let's collaborate</h2>
     <p class="areas">gaming publishers &amp; peripherals · cosplay &amp; sfx make up · lifestyle brands</p>
-    <span class="email-slot">georgiarosedevinex@gmail.com</span>
+    <a class="email-slot" href="mailto:hello@georose.xyz">hello@georose.xyz</a>
     <p class="note">for partnership enquiries, sponsorship opportunities, or any collaboration discussions, please reach out directly via email</p>
   </div>
 </section>
