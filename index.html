@@ -339,6 +339,14 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
   .brands-grid { gap: clamp(0.6rem, 3vw, 1rem); }
   .brand-tile { flex: 1 1 40%; max-width: none; }
 }
+
+.stats-intro {
+  text-align: center;
+  font-size: var(--fs-body);
+  max-width: 48ch;
+  margin: -1rem auto clamp(2rem, 5vw, 3.5rem);
+  color: color-mix(in srgb, var(--cream) 80%, transparent);
+}
 </style>
 </head>
 <body>
@@ -412,16 +420,17 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
 <section class="section section--dark fade-in">
   <div class="wrap">
     <h2 class="stats-title">the numbers</h2>
+    <p class="stats-intro">previous 30 days</p>
     <div class="stats-grid stats-row">
       <div class="stat"><span class="stat-label">tiktok</span><span class="stat-num">117,000</span></div>
       <div class="stat"><span class="stat-label">tiktok likes</span><span class="stat-num">2.2m</span></div>
       <div class="stat"><span class="stat-label">twitch</span><span class="stat-num">8,000</span></div>
-      <div class="stat"><span class="stat-label">twitch avg viewers</span><span class="stat-num">99+</span></div>
+      <div class="stat"><span class="stat-label">twitch avg viewers</span><span class="stat-num">120</span></div>
     </div>
     <div class="stats-grid stats-row">
       <div class="stat"><span class="stat-label">instagram</span><span class="stat-num">50,000</span></div>
       <div class="stat"><span class="stat-label">discord</span><span class="stat-num">500</span></div>
-      
+      <div class="stat"><span class="stat-label">Twitch channel views</span><span class="stat-num">60,000</span></div>
     </div>
   </div>
 </section>
@@ -430,7 +439,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
   <div class="wrap">
     <div class="community-card fade-in">
       <h2>live community<br>and audience</h2>
-      <p class="community-tags">georose is live over 25 hours per week on twitch and tiktok<br>to an engaged and loyal community<br><br>based on the previous 51,551 channel views</p>
+      <p class="community-tags">georose is live over 25 hours per week on twitch and tiktok<br>to an engaged and loyal community<br><br>based on the previous 60,000+ channel views</p>
 
       <h3 class="chart-title">geographic reach</h3>
       <div class="geo-chart">
