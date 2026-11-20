@@ -554,20 +554,23 @@ document.querySelectorAll('.particle-field').forEach(function (field) {
     return { weekday: parts.weekday, hour: parseInt(parts.hour, 10) };
   }
 
-  function update() {
+function update() {
     var p = londonParts();
     var weekdays = ['Tue', 'Wed', 'Thu', 'Fri'];
     var isWeekday = weekdays.indexOf(p.weekday) !== -1;
 
-    // Convert current time to total minutes since midnight
-    var totalMinutes = (p.hour * 60) + p.minute;
+    // Safely grab the current London minute as a number
+    var londonMinute = Number(new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'Europe/London',
+        minute: 'numeric'
+    }).format(new Date()));
 
-    // 11:30 = (11 * 60) + 30 = 690
-    // 17:30 = (17 * 60) + 30 = 1050
+    // 11:30 = 690 | 17:30 = 1050
+    var totalMinutes = (Number(p.hour) * 60) + londonMinute;
     var inHours = totalMinutes >= 690 && totalMinutes < 1050;
     
     btn.hidden = !(isWeekday && inHours);
-  }
+}
 
   update();
   setInterval(update, 60 * 1000);   // re-check each minute
