@@ -407,7 +407,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
         <h2>who is georose?</h2>
         <p>georose is a twitch and tiktok live streamer and content creator for dead by daylight and other horror genre games, bringing spooky cosy vibes to an engaged, loyal community across multiple platforms</p>
         <p>beyond dead by daylight, georose's creative outlet is in cosplay and sfx makeup, bringing horror gaming and movie characters to life in detailed, handcrafted looks that consistently perform strongly across tiktok and instagram</p>
-        <p>live stream schedule<br>monday to friday, 11:00 to 16:00 gmt</p>
+        <p>live stream schedule<br>tuesday to friday, 11:30 to 17:30 gmt</p>
         <a href="https://www.twitch.tv/georose/" class="btn-block" id="live-btn" target="_blank" rel="noopener" hidden>watch live</a>
       </div>
       <div class="portrait-wrap">
@@ -420,12 +420,12 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
 <section class="section section--dark fade-in">
   <div class="wrap">
     <h2 class="stats-title">the numbers</h2>
-    <p class="stats-intro">previous 30 days</p>
+    <p class="stats-intro">prvious 30 days</p>
     <div class="stats-grid stats-row">
       <div class="stat"><span class="stat-label">tiktok</span><span class="stat-num">117,000</span></div>
       <div class="stat"><span class="stat-label">tiktok likes</span><span class="stat-num">2.2m</span></div>
-      <div class="stat"><span class="stat-label">twitch</span><span class="stat-num">8,000</span></div>
-      <div class="stat"><span class="stat-label">twitch avg viewers</span><span class="stat-num">120</span></div>
+      <div class="stat"><span class="stat-label">twitch</span><span class="stat-num">8,400</span></div>
+      <div class="stat"><span class="stat-label">twitch avg viewers</span><span class="stat-num">140</span></div>
     </div>
     <div class="stats-grid stats-row">
       <div class="stat"><span class="stat-label">instagram</span><span class="stat-num">50,000</span></div>
@@ -439,7 +439,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
   <div class="wrap">
     <div class="community-card fade-in">
       <h2>live community<br>and audience</h2>
-      <p class="community-tags">georose is live over 25 hours per week on twitch and tiktok<br>to an engaged and loyal community<br><br>based on the previous 60,000+ channel views</p>
+      <p class="community-tags">georose is live over 25+ hours per week on twitch and tiktok<br>to an engaged and loyal community<br><br>based on the previous 60,000+ channel views</p>
 
       <h3 class="chart-title">geographic reach</h3>
       <div class="geo-chart">
@@ -493,8 +493,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
 </section>
 
 <footer class="site-footer fade-in">
-  <p>last updated: September 2026</p>
-  <p>georose · 2026</p>
+  <p>last updated: November 2026</p>
+  <p>georose</p>
 </footer>
 
 </div><!-- /page-wrap -->
@@ -556,9 +556,16 @@ document.querySelectorAll('.particle-field').forEach(function (field) {
 
   function update() {
     var p = londonParts();
-    var weekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
+    var weekdays = ['Tue', 'Wed', 'Thu', 'Fri'];
     var isWeekday = weekdays.indexOf(p.weekday) !== -1;
-    var inHours = p.hour >= 11 && p.hour < 16;
+
+    // Convert current time to total minutes since midnight
+    var totalMinutes = (p.hour * 60) + p.minute;
+
+    // 11:30 = (11 * 60) + 30 = 690
+    // 17:30 = (17 * 60) + 30 = 1050
+    var inHours = totalMinutes >= 690 && totalMinutes < 1050;
+    
     btn.hidden = !(isWeekday && inHours);
   }
 
